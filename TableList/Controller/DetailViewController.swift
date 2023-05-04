@@ -9,8 +9,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    
     @IBOutlet weak var trackImageView: UIImageView!
     @IBOutlet weak var trackNameLable: UILabel!
+ 
     
     var song: Song!
     
@@ -27,14 +29,16 @@ class DetailViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
-
+/*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let indexPath = tableView.indexPathForSelectedRow {
+            print(indexPath)
+            // Pass the selected object to the new view controller.
+            let detailVC?.song = songs[indexPath.row]
+        }
+ */
     }
-    */
-
-}
