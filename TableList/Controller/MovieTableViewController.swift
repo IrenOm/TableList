@@ -39,6 +39,7 @@ class MovieTableViewController: UITableViewController {
         
         cell.movieImageView.image = UIImage(named: movie.movie)
         cell.realesedLabel.text = movie.realesed
+        cell.directorLabel.text = movie.director
         
         return cell
     }

@@ -57,18 +57,15 @@ class DataManager {
         "YG - Stop Snitching",
     ]
     var movie = [
-        "Avatar",
-        "Titanic"
+        "Avatar"
     ]
     
     var realesed = [
-        "2022",
-        "2020"
+        "2022"
     ]
     
     var director = [
-        "James Cameron",
-        "hhh"
+        "James Cameron"
     ]
 }
 
