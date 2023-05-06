@@ -29,3 +29,30 @@ struct Song {
         return songs
     }
 }
+
+
+struct Movie {
+    
+    let movie: String
+    let realesed: String
+    let director: String
+    
+    static func creatMovie() -> [Movie] {
+        
+        var moviesArray: [Movie] = []
+        
+        let movies = DataManager.shared.movie
+        let realeseds = DataManager.shared.realesed
+        let directors = DataManager.shared.director
+        
+       for i in 0..<movies.count {
+           let movie = Movie(movie: movies[i], realesed: realeseds[i], director: directors[i])
+           moviesArray.append(movie)
+           
+//        let song = Song(track: tracks[i], album: albums[i], cover: covers[i])
+//            songs.append(song)
+        }
+        
+        return moviesArray
+    }
+}

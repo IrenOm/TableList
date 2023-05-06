@@ -72,37 +72,59 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatarrr" translatesAutoresizingMaskIntoConstraints="NO" id="YIf-Ty-VQW">
-                                            <rect key="frame" x="20" y="32" width="149" height="243"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Avatar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZv-nd-eYi">
-                                            <rect key="frame" x="193" y="32" width="151" height="46"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Released:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8w-rI-TR3">
-                                            <rect key="frame" x="193" y="86" width="151" height="46"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Director: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkA-DE-E1T">
-                                            <rect key="frame" x="193" y="140" width="151" height="46"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Wcs-5J-nju">
+                                            <rect key="frame" x="20" y="32" width="344" height="248"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="YIf-Ty-VQW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="169" height="248"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h3C-LM-8rb">
+                                                    <rect key="frame" x="193" y="0.0" width="151" height="154"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avatar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZv-nd-eYi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="151" height="46"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="aLd-a6-4tE"/>
+                                                                <constraint firstAttribute="height" constant="46" id="yl9-Ke-eDW"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8w-rI-TR3">
+                                                            <rect key="frame" x="0.0" y="54" width="151" height="46"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkA-DE-E1T">
+                                                            <rect key="frame" x="0.0" y="108" width="151" height="46"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="XkA-DE-E1T" firstAttribute="height" secondItem="BZv-nd-eYi" secondAttribute="height" id="04D-Wf-hg9"/>
+                                                        <constraint firstItem="p8w-rI-TR3" firstAttribute="width" secondItem="BZv-nd-eYi" secondAttribute="width" id="PVN-46-dSc"/>
+                                                        <constraint firstItem="XkA-DE-E1T" firstAttribute="width" secondItem="BZv-nd-eYi" secondAttribute="width" id="lWn-Ti-827"/>
+                                                        <constraint firstItem="p8w-rI-TR3" firstAttribute="height" secondItem="BZv-nd-eYi" secondAttribute="height" id="lzw-7T-AFV"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Wcs-5J-nju" firstAttribute="top" secondItem="azL-73-udB" secondAttribute="top" constant="32" id="Ai4-WW-aKQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Wcs-5J-nju" secondAttribute="bottom" constant="20" id="IVC-B1-YLA"/>
+                                        <constraint firstAttribute="trailing" secondItem="Wcs-5J-nju" secondAttribute="trailing" constant="29" id="Mrk-du-EAZ"/>
+                                        <constraint firstItem="Wcs-5J-nju" firstAttribute="leading" secondItem="azL-73-udB" secondAttribute="leading" constant="20" symbolic="YES" id="dj1-3m-ig3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="directorImageView" destination="XkA-DE-E1T" id="kOs-yX-vi8"/>
+                                    <outlet property="directorLabel" destination="XkA-DE-E1T" id="kOs-yX-vi8"/>
                                     <outlet property="movieImageView" destination="YIf-Ty-VQW" id="hTr-aM-SW5"/>
-                                    <outlet property="realesedImageView" destination="p8w-rI-TR3" id="mou-2i-UFt"/>
+                                    <outlet property="realesedLabel" destination="p8w-rI-TR3" id="mou-2i-UFt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -224,7 +246,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Avatarrr" width="848" height="1230"/>
+        <image name="Avatar" width="848" height="1230"/>
         <image name="music.note" catalog="system" width="96" height="128"/>
         <image name="popcorn" catalog="system" width="102" height="128"/>
         <systemColor name="systemBackgroundColor">

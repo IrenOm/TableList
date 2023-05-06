@@ -7,10 +7,16 @@
 
 import UIKit
 
-class MovieTableViewController: UITableViewController {
 
+
+class MovieTableViewController: UITableViewController {
+    
+    var movies = Movie.creatMovie()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(movies.count)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -23,15 +29,17 @@ class MovieTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return movies.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else {return UITableViewCell() }
-
-        cell.movieImageView.image = UIImage(named: "Avatar")
-
+        let movie = movies[indexPath.row]
+        
+        cell.movieImageView.image = UIImage(named: movie.movie)
+        cell.realesedLabel.text = movie.realesed
+        
         return cell
     }
     

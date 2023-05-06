@@ -10,8 +10,8 @@ import UIKit
 class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var realesedImageView: UILabel!
-    @IBOutlet weak var directorImageView: UILabel!
+    @IBOutlet weak var realesedLabel: UILabel!
+    @IBOutlet weak var directorLabel: UILabel!
     
     
     override func awakeFromNib() {
